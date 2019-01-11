@@ -7,15 +7,14 @@
 /* Index Home */
 .body-home{
     background-image: url(./img/background3.jpg);
-    background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     text-align: center;
-    margin: 0;
+    padding: 0px
 }
-
  /* Barra de menu */
-.menu-bar{
+ .menu-bar{
     display: flex;
     flex-wrap: nowrap;
     margin: auto;
@@ -48,6 +47,11 @@
     background-color: #896331;
 }
 
+.video-container{
+    text-align: center
+}
+
+
 .explanation-box {
     background-color: rgba(255, 255, 255, 0.6);
     width: 46%;
@@ -61,10 +65,14 @@
 .summoners-code{
     background-color: rgba(255, 255, 255, 0.1);
     width: 48%;
-    margin: 1%;
+    margin: auto;
     float: left;
     height: 48%;
     padding-bottom: 30px;
+}
+.kda-video{
+    width: 560px;
+    height: 315px;
 }
 
 .explanation-box h1{
@@ -125,9 +133,9 @@ footer{
 /*Index List of champions*/
 .body-champs{
     background-image: url(./img/background2.jpg);
-    background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     text-align: center;
     background-repeat: repeat-x;
 }
@@ -343,7 +351,25 @@ section{
         font-size: 63%
     }
 }
-
+@media (max-width: 400px)
+{
+    .kda-video{
+        width: 100%;
+    }
+    
+    .summoners-code{
+        width: 98%;
+        margin: auto;
+        text-align: center;
+        padding: 0%;
+        margin-bottom: 35px
+    }
+    .explanation-box{
+        width: 96%;
+        margin-bottom: 15px;
+        font-size: 13px
+    }
+}
 .modal-window {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.25);
@@ -459,6 +485,10 @@ table, th, td {
 
 .mySlides {
     width: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
 }
 .mySlides img {
     vertical-align: middle;
@@ -507,14 +537,14 @@ table, th, td {
 
 /* Caption text */
 .text {
-  color: white;
-  font-size: 20px;
-  font-family: 'ZCOOL KuaiLe';
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+    color: white;
+    font-size: 20px;
+    width: 90%;
+    font-family: 'ZCOOL KuaiLe';
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Number text (1/6 etc) */
