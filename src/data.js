@@ -29,14 +29,16 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
   if (sortBy === 0) {
     // Ordenar por Alfabéticamente
     newArrayFilter.sort(
-      function(ab, cd) {
+      function(championAsc, championDsc) {
         if (sortOrder === 0) {
-          if (ab.name > cd.name) {
+          if (championAsc.name > championDsc.name) {
             return 1;
-          }
+          } 
         } else {
-          if (ab.name < cd.name) {
+          if (championAsc.name < championDsc.name) {
             return 1;
+          } else {
+            return -1;
           }
         }
       }
@@ -44,9 +46,9 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
   } else {
     // Ordenar por Dificultad
     newArrayFilter.sort(
-      function(ab, cd) {
-        if (sortOrder === 0) return ab.info.difficulty - cd.info.difficulty;
-        else return cd.info.difficulty - ab.info.difficulty;
+      function(championAsc, championDsc) {
+        if (sortOrder === 0) return championAsc.info.difficulty - championDsc.info.difficulty;
+        else return championDsc.info.difficulty - championAsc.info.difficulty;
       });
   }
   return newArrayFilter;
