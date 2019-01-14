@@ -45,24 +45,25 @@ const createTemplateCard = (arrKeys) => {
       <p>${ newArrKeys[i].blurb}</p>
       <p>${ newArrKeys[i].tags}</p>
       <table>
-        <tr>
-          <th> Health Points (HP)</th>
-          <th> HP per Level</th>
-          <th> HP at Lvl. 5</th>
-          <th> HP at Lvl. 10</th>
-          <th> HP at Lvl. 15</th>
-          <th> HP at Lvl. 18</th>
-        </tr>
-        <tr>
-          <td>${ newArrKeys[i].stats.hp}</td>
-          <td>${ newArrKeys[i].stats.hpperlevel}</td>
-          <td>${window.data.computeStats(newArrKeys[i], 5)}</td>
-          <td>${window.data.computeStats(newArrKeys[i], 10)}</td>
-          <td>${window.data.computeStats(newArrKeys[i], 15)}</td>
-          <td>${window.data.computeStats(newArrKeys[i], 18)}</td>
-        </tr>
+      <tr>
+        <th> Health Points (HP)</th>
+        <th> HP per Level</th>
+        <th> HP at Lvl. 5</th>
+        <th> HP at Lvl. 10</th>
+        <th> HP at Lvl. 15</th>
+        <th> HP at Lvl. 18</th>
+      </tr>
+      <tr>
+        <td>${ newArrKeys[i].stats.hp}</td>
+        <td>${ newArrKeys[i].stats.hpperlevel}</td>
+        <td>${window.data.computeStats(newArrKeys[i], 5)}</td>
+        <td>${window.data.computeStats(newArrKeys[i], 10)}</td>
+        <td>${window.data.computeStats(newArrKeys[i], 15)}</td>
+        <td>${window.data.computeStats(newArrKeys[i], 18)}</td>
+      </tr>
       </table>
       </div>
+
     </div>
     </section>`
     );

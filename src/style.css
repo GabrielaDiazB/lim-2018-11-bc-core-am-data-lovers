@@ -13,6 +13,7 @@
     text-align: center;
     padding: 0px
 }
+
  /* Barra de menu */
  .menu-bar{
     display: flex;
@@ -44,74 +45,97 @@
   } 
   
 .active{
-    background-color: #896331;
+    background: linear-gradient(to bottom,#A68747 0,#815500 100%);
+    color: black;
 }
 
-.video-container{
-    text-align: center
-}
-
-
+/*Caja de explicación del juego*/
 .explanation-box {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
     width: 46%;
-    height: 1200px;
+    height: auto;
     margin: 1%;
     float: left;
     border: 5px inset #896331;
     overflow: auto;
+    font-family: aGaramondPro;
 }
 
+.box-divider{
+    width: 100%;
+}
+
+
+.explanation-box h2{
+    padding: 1%;
+}
+
+.explanation-box p{
+    font-family: 'ZCOOL KuaiLe';
+    padding: 1% 0;
+    font-size: 20px;
+}
+
+.explanation-box a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: .25rem;
+    
+}
+
+.explanation-box a:hover{
+    color: #21374f;
+    font-size:22px;
+    font-weight: bold;
+}
+
+.btn-playnow{
+    border: 2px outset #896331;
+    color: black;
+    font-family: 'ZCOOL KuaiLe';
+    outline: none;
+    cursor:pointer;
+    text-decoration: none;
+    height: 34px;
+    width: 240px;
+    overflow: hidden;
+    background: linear-gradient(to bottom,#A68747 0,#815500 100%);
+    font-size: 1.5rem;
+    letter-spacing: .25rem;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 25px rgba(0,0,0,.11);
+    transition-duration:0.3s;
+    margin-bottom: 5px;
+ 
+}
+
+.btn-playnow:hover{
+    transition: 0.3s ease;
+    border: 2px outset #937341;
+    font-size: 1.6rem;
+}
+
+.btn-playnow:active{
+    box-shadow: 0 1px #101A1C;
+    transform: translateY(2px);
+}
+
+/* Summoners Code Slide */
 .summoners-code{
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
     width: 48%;
     margin: auto;
     float: left;
     height: 48%;
     padding-bottom: 30px;
 }
-.kda-video{
-    width: 560px;
-    height: 315px;
-    border: none;
-}
 
-.explanation-box h1{
+.summoners-code h2{
     font-family: aGaramondPro;
-    padding: 1%;
-}
-.explanation-box h2{
-    font-family: aGaramondPro;
-    padding: 1%;
-    border-top: 1px solid black;
-}
-.explanation-box p{
-    font-family: 'ZCOOL KuaiLe';
-    padding: 1% 0;
-}
-
-.btn-playnow{
-    background-color: #937341;
-    border: 2px outset #896331;
-    color: black;
-    font-family: 'ZCOOL KuaiLe';
-    font-size: 25px;
-    outline: none;
-    text-decoration: none;
-    transition-duration:0.5s;
-    width: 40px;
-    height: 34px;
-    overflow: hidden;    
-}
-.btn-playnow:hover{
-    transition: 0.3s ease;
-    font-weight: bold;
-    background-color: #A68747;
-    border: 2px outset #937341;
-}
-.btn-playnow:active{
-    box-shadow: 0 1px #101A1C;
-    transform: translateY(2px);
+    background: linear-gradient(to bottom,#A68747 0,#815500 100%);
+    font-size: 30px;
 }
 
 .sc-img{
@@ -119,6 +143,39 @@
     height: auto;
 }
 
+.body-divider{
+    width: 50%;
+}
+
+/* Video Home*/
+.video-container{
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 48%;
+    float: left;
+}
+
+.kda-video{
+    width: 560px;
+    height: 315px;
+    border: none;
+}
+
+.video-container h2{
+    font-family: aGaramondPro;
+    background: linear-gradient(to bottom,#A68747 0,#815500 100%);
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.video-container p{
+    font-family: 'ZCOOL KuaiLe';
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+}
+
+/*Pie de Página*/
 footer{
     position: fixed;
     left: 0;
@@ -153,12 +210,14 @@ section{
 }
 
 .logo-lol{
+    position: fixed;
     display: flex;
     justify-content: left;
     width: 5%;
     padding-bottom: 0;
 }
 
+/* Barra de Ordenado, Filtrado y Buscador */
 .search-bar{
     border: none;
     border-radius: 5px;
@@ -173,14 +232,24 @@ section{
     justify-content: center;
     border: none
 }
+
 .champions-sort label{
     font-family: 'ZCOOL KuaiLe';
     font-size: 15px;
 }
+
 .lol-sort{
     border: 2px solid #896331;
     font-family: 'ZCOOL KuaiLe';
-    padding: 2px
+    font-weight: bold;
+    padding: 2px;
+    background-color: #937341;
+}
+.lol-sort:hover{
+    background-color: white;
+}
+.lol-sort option{
+    font-weight: bold;
 }
 
 .search-for-champion{
@@ -225,6 +294,7 @@ section{
     font-weight: bold;
 }
 
+/* Cartas en el Template*/
 .container-list{
     width: 90%;
     height: 100%;
@@ -301,75 +371,7 @@ section{
 
 }
 
-@media (max-width: 900px)
-{
-    .search-for-champion{
-        width:80%
-    }
-
-}
-@media (max-width: 650px)
-{
-    .search-for-champion{
-        width:70%
-    }
-}
-
-@media (max-width: 700px)
-{
-    body{
-        padding: 0px
-    }
-    .title-lol{
-        width: 55%;
-    }
-    .subtitle-lol{
-        font-size: 120%;
-        padding: 5%
-    }
-    .blog-card{
-        width: 101px;
-        height: 144px;
-        padding: 8%;
-        font-size: 65%
-    }
-    .post-name, .post-title{
-        margin: 2px
-    }
-    .container-list{
-        margin: auto;
-        padding-top: 2%
-    }
-    
-}
-@media (max-width: 400px)
-{
-    .blog-card{
-        width: 90px;
-        height: 128px;
-        padding: 2%;
-        font-size: 63%
-    }
-}
-@media (max-width: 400px)
-{
-    .kda-video{
-        width: 100%;
-    }
-    
-    .summoners-code{
-        width: 98%;
-        margin: auto;
-        text-align: center;
-        padding: 0%;
-        margin-bottom: 35px
-    }
-    .explanation-box{
-        width: 96%;
-        margin-bottom: 15px;
-        font-size: 13px
-    }
-}
+/*Ventana Modal*/
 .modal-window {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.25);
@@ -385,12 +387,10 @@ section{
     transition: all 0.3s;
 }
 
-
 .modal-window:target {
     opacity: 1;
     pointer-events: auto;
 }
-
 
 .modal-close {
     color: white;
@@ -404,12 +404,13 @@ section{
 }
 
 .modal-close:hover {
-    color:gray;
+    color:#896331;
+    font-weight: bold;
   }
 
 .modal-content{
     font-family: 'ZCOOL KuaiLe';
-    width: 40%;
+    width: 45%;
     height: auto;
     position: absolute;
     top: 50%;
@@ -419,12 +420,7 @@ section{
     
 }
 
-
-table, th, td {
-    border: 2px inset #896331;
-    border-collapse: collapse;
-  }
-
+/* Contenido de Ventana Modal*/
 .modal-info{
     background-color: rgba(255, 255, 255, 0.3);
     position: absolute;
@@ -461,8 +457,9 @@ table, th, td {
 }
 
 .modal-info img{
+    width: 15%;
     padding-top: 15px;
-    width: 20%;
+    
 }
 
 .modal-info h1{
@@ -470,10 +467,17 @@ table, th, td {
     font-size: 40px;
 }
 
-.modal-info h3{
+.modal-info h2{
     margin: 0 auto;
     font-size: 25px;
 }
+
+.modal-info p{
+    font-family: aGaramondPro;
+    font-weight: bold;
+    color: black;
+}
+
 
 .modal-img{
     background-position: center;
@@ -481,7 +485,139 @@ table, th, td {
     height: auto;
 }
 
-/* Slideshow automático de imágenes */
+/* Tabla de Ventana Modal*/
+table, th, td {
+    border: 2px inset #896331;
+    border-collapse: collapse;
+}
+
+/* Responsive */
+@media (max-width: 900px)
+{
+    .logo-lol{
+        width: 50px;
+    }
+
+    .search-for-champion{
+        width:80%
+    }
+
+    .modal-content{
+        width: 100%;
+        height: auto;
+    }
+
+    .modal-info{
+        width: 100%;
+        height: 80%;
+        overflow: auto;
+        transform: translate(-30%, -50%); 
+    }
+
+
+    .modal-img{
+        width: 100%;
+    }
+
+    .modal-info h1{
+        font-size: 25px;
+    }
+
+    .modal h2{
+        font-size: 20px;
+    }
+
+
+    table{
+        display: flex;
+        justify-content: center;
+        border: none;
+    }
+
+}
+@media (max-width: 650px)
+{
+    .search-for-champion{
+        width:70%
+    }
+
+}
+
+@media (max-width: 700px)
+{
+    body{
+        padding: 0px
+    }
+    .title-lol{
+        width: 55%;
+    }
+    .subtitle-lol{
+        font-size: 120%;
+        padding: 5%
+    }
+    .blog-card{
+        width: 101px;
+        height: 144px;
+        padding: 8%;
+        font-size: 65%
+    }
+    .post-name, .post-title{
+        margin: 2px
+    }
+    .container-list{
+        margin: auto;
+        padding-top: 2%
+    }
+    .modal-info img{
+        width: 20%;
+    }
+    
+}
+@media (max-width: 400px)
+{
+
+    .blog-card{
+        width: 90px;
+        height: 128px;
+        padding: 2%;
+        font-size: 63%
+    }
+
+}
+
+@media (max-width: 500px)
+{
+    .logo-lol{
+        width: 40px;
+    }
+
+    .kda-video{
+        width: 98%;
+    }
+
+    .video-container{
+        width: 98%;
+    }        
+    
+    .summoners-code{
+        width: 98%;
+        margin: auto;
+        text-align: center;
+        padding: 0%;
+        margin-bottom: 35px
+    }
+    .explanation-box{
+        width: 96%;
+        margin-bottom: 15px;
+        font-size: 13px
+    }
+    .body-divider{
+        width: 100%;
+    }
+}
+
+
+/* Slideshow de imágenes */
 
 .mySlides {
     width: 100%;
@@ -495,14 +631,14 @@ table, th, td {
     width:100%;
 }
 
-/* Slideshow container */
+/* Slideshow contenedor */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Next & previous buttons */
+/* Botones de Siguiente/Anterior */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -518,7 +654,7 @@ table, th, td {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* Posición de los botones de "siguiente" a la derecha */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -529,13 +665,13 @@ table, th, td {
     border-radius: 0 3px 3px 0;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* Con hover, color nuevo para que resalte */
 .prev:hover, .next:hover {
   background-color: rgb(137, 99, 49, 0.8);
   color:black;
 }
 
-/* Caption text */
+/* Texto por imagen */
 .text {
     color: white;
     font-size: 20px;
@@ -547,7 +683,7 @@ table, th, td {
     transform: translate(-50%, -50%);
 }
 
-/* Number text (1/6 etc) */
+/* Número de la imagen (1/6 etc) */
 .numbertext {
   color: white;
   font-size: 20px;
@@ -557,7 +693,7 @@ table, th, td {
   font-family: 'ZCOOL KuaiLe';
 }
 
-/* The dots/bullets/indicators */
+/* Las bolitas */
 .dot-chain{
     display: flex;
     flex-direction: row;
@@ -577,7 +713,7 @@ table, th, td {
   background-color: #896331;
 }
 
-/* Fading animation */
+/* Animación de las imágenes */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -595,23 +731,8 @@ table, th, td {
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
+/* Responsive del Texto de cada imagen */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
 
-/* Video Home*/
-
-.video-container h2{
-    font-family: aGaramondPro;
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-}
-
-.video-container p{
-    font-family: 'ZCOOL KuaiLe';
-    font-size: 20px;
-    color: white;
-    text-align: justify;
-}
