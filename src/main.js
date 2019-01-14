@@ -1,9 +1,9 @@
 // Variables declaradas
 const arrKeys = Object.values(window.LOL.data);
-const sortBy = document.getElementById('lol-sort');
-
-const inputSearchText = document.getElementById('search-for-champion');
-const btnSearch = document.getElementById('search-btn');
+const sortBy = document.getElementById('lol-sort'); // Valores de cada Select
+const inputSearchText = document.getElementById('search-for-champion'); // Búsqueda Ingresada
+const btnSearch = document.getElementById('search-btn'); // Botón de Búsqueda
+const tagArray = Object.values(document.getElementsByClassName('filter-champ')); // Valores de los checkboxes
 
 
 // Recorre la data y plasma en el html templates (cards y ventanas modales)
@@ -73,7 +73,7 @@ const createTemplateCard = (arrKeys) => {
 createTemplateCard(arrKeys);
 
 // Filtrar
-const tagArray = Object.values(document.getElementsByClassName('filter-champ'));
+// Se captura el valor de checkbox en un array al ser seleccionado y se quita el valor al deseleccionarlo
 const filterChamp = (arrayTag) => {
   let arrayChoices = [];
   arrayTag.forEach(tag => {
@@ -85,7 +85,7 @@ const filterChamp = (arrayTag) => {
         arrayChoices.splice(x, 1);
         createTemplateCard(arrKeys);
       }
-      createTemplateCard(window.data.filterData(arrKeys, arrayChoices));
+      createTemplateCard(window.data.filterData(arrKeys, arrayChoices)); // Se llama a la función filtrando con el array nuevo donde se encuentran los valores de los tags
     });
   });
 };
@@ -94,17 +94,19 @@ filterChamp(tagArray);
 
 // Ordenar y Buscar
 
-const functionListenFilterOrder = () => {
-  const listenSortBy = sortBy.options[sortBy.selectedIndex].value;
-  const arrayInputFilter = window.data.searchData(arrKeys, inputSearchText.value);
-  createTemplateCard(window.data.sortData(arrayInputFilter, parseInt(listenSortBy[0]), parseInt(listenSortBy[1])));
+const functionOrderSearch = () => {
+  const listenSortBy = sortBy.options[sortBy.selectedIndex].value; // Llama a la posición en la que se encuentra cada opción del select
+  const arrayInputSearch = window.data.searchData(arrKeys, inputSearchText.value); // Valores de la Búsqueda
+  // const arrayFilter = window.data.filterData(arrKeys, tagArray);
+  createTemplateCard(window.data.sortData(arrayInputSearch, parseInt(listenSortBy[0]), parseInt(listenSortBy[1]))); // Ingresa como data el array que se ha buscado permitiendo que se pueda ordenar
+  // createTemplateCard(window.data.sortData(arrayFilter, parseInt(listenSortBy[0]), parseInt(listenSortBy[1])));
 };
 
-const functionMain = () => {
-  functionListenFilterOrder();
-  sortBy.addEventListener('change', functionListenFilterOrder);
-  btnSearch.addEventListener('click', functionListenFilterOrder);
+const callFunctionToSearchAndOrder = () => {
+  functionOrderSearch();
+  sortBy.addEventListener('change', functionOrderSearch); // Se añade evento para la función de ordenado y búsqueda
+  btnSearch.addEventListener('click', functionOrderSearch);
 };
 
-functionMain();
+callFunctionToSearchAndOrder();
 
