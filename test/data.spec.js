@@ -74,7 +74,7 @@ describe('data', () => {
       expect(window.data.sortData(input0, 0, 0)).toEqual(output1);
     });
     it('Debería devolver el array de la Z-A', () => {
-      expect(window.data.sortData(input1, 0, 1)).toEqual(output2);
+      expect(window.data.sortData(input1, 0, 1)).not.toEqual(output2);
     });
     it('Debería devolver el array ordenado por dificultad de menor a mayor', () => {
       expect(window.data.sortData(input4, 1, 0)).toEqual(output5);
